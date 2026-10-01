@@ -48,5 +48,5 @@ if st.button("Decide"):
         
     st.bar_chart(route)
     angry = noui(message, "angry or frustrated", "calm or happy")
-    st.metric("How angry", noui(message, "angry or frustrated", "calm or happy"))
+    st.metric("How angry", angry.get("angry or frustrated", 0.0))
     st.metric("How urgent (1 to 3)", score(message, URGENCY))
